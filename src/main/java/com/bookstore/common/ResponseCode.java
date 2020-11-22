@@ -1,10 +1,14 @@
 package com.bookstore.common;
 
+import org.codehaus.jackson.map.annotate.JsonSerialize;
+
 /**
  * @description:
  * @author: Tian
  * @time: 2020/7/15 22:26
  */
+//这是由泛型实现的高可复用的服务端响应类
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public enum ResponseCode {
 
     SUCCESS(0,"SUCCESS"),

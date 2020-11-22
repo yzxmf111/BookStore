@@ -180,7 +180,7 @@
     </foreach>
   </insert>
 
-  <select id="selectByOrderNoAndUserId" resultMap="BaseResultMap" resultType="long">
+  <select id="selectByOrderNoAndUserId" resultMap="BaseResultMap" parameterType="map">
     SELECT
     <include refid="Base_Column_List"/>
     from bookstore_order_item
@@ -188,7 +188,7 @@
     and order_no = #{orderNo}
   </select>
 
-  <select id="selectByOrderNo" resultMap="BaseResultMap" resultType="long">
+  <select id="selectByOrderNo" resultMap="BaseResultMap" parameterType="map">
     SELECT
     <include refid="Base_Column_List"/>
     from bookstore_order_item
